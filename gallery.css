@@ -1,0 +1,68 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+.filters button {
+  margin: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #fff;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav button {
+  margin: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .lightbox img {
+    max-width: 95%;
+  }
+}

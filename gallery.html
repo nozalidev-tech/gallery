@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<h2>Image Gallery</h2>
+
+<!-- Filters -->
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+  <img src="gallery\2cdf62c2a373d3d484f52e9168750e90.jpg." data-category="nature" onclick="openLightbox(0)">
+  <img src="gallery\2fa44d8d37308e56c65e7a9b23b7aa20.jpg" data-category="city" onclick="openLightbox(1)">
+  <img src="gallery\0535eee8de38a9d7b3916b179da61c53.jpg" data-category="nature" onclick="openLightbox(2)">
+  <img src="gallery\6eb9e8270671a2148f64145283f41a4d.jpg" data-category="city" onclick="openLightbox(3)">
+  <img src="gallery\705a19908603e267e74c7cf65800f5ea.jpg" data-category="nature" onclick="openLightbox(4)">
+  <img src="gallery\3864b397f75a8ed8ba39c2c3e593f738.jpg" data-category="city" onclick="openLightbox(5)">
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+  <div class="nav">
+    <button onclick="prev()">⏮ </button>
+    <button onclick="next()">⏭</button>
+  </div>
+</div>
+
+<script src="gallery.js"></script>
+</body>
+</html>
